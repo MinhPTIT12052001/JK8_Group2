@@ -10,5 +10,3 @@ function giaiPT1() {
         console.log("Phuong trinh co nghiem la: ", -b/a)
     }
 }
-
-giaiPT1()

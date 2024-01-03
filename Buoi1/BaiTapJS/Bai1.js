@@ -1,5 +1,3 @@
-var n = prompt("Nhap so nguyen n: ")
-
 function isInteger(n) {
     if(n%2 === 1 || n%2 === 0) {
         return true
@@ -8,7 +6,8 @@ function isInteger(n) {
     }        
 }
 
-function isNguyenDuong(n) {
+function isNguyenDuong() {
+    var n = prompt("Nhap so nguyen n: ")
     if(isInteger(n)) {
         if(n > 0) {
             console.log(n, "la so nguyen duong")
@@ -19,5 +18,3 @@ function isNguyenDuong(n) {
         console.log(n, "khong phai so nguyen")
     }
 }
-
-isNguyenDuong(n)
