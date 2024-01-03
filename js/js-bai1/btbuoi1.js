@@ -9,7 +9,11 @@ console.log(phoneNumber);
 //bài tập 2
 let lenght = prompt("Nhập vào chiều dài :");
 let width = prompt("Nhập vào chiều rộng");
-let totalArea = lenght * width * 6;
+let height = prompt("Nhập vào chiều cao :");
+lenght = parseInt(lenght);
+width = parseInt(width);
+height = parseInt(height);
+let totalArea = (lenght + width) * 2 * height + lenght * width * 2;
 console.log("Diện tích toàn phần của hình hộp chữ nhật là :" + totalArea);
 
 // bài 3
