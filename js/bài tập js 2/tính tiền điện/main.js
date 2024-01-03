@@ -1,7 +1,10 @@
 let soDien = prompt("Nhập số điện đã tiêu thụ :");
 soDien = parseInt(soDien);
-console.log("Tiền điện phải trả là :" + tinhTienDien(soDien));
-alert("Số tiền điện phải trả là :" + tinhTienDien(soDien));
+let tienDien = tinhTienDien(soDien);
+let tienVAT = tienDien / 10;
+let tienPhaiTra = tienDien + tienVAT;
+console.log("Tiền điện phải trả là :" + tienPhaiTra);
+alert("Số tiền điện phải trả là :" + tienPhaiTra);
 
 function tinhTienDien(a) {
   let dienToiDaHeso1 = 50 * 1806;
