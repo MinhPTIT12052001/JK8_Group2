@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="number">Nhập số:</label>
+    <input type="text" name="number" id="number"/>
+    <input type="submit" value="Kiểm tra" onclick="check()"/>
+    <p id="result"></p>
+    <script>
+       function checkSCP(a){
+            a = Number(a);
+            let n = Math.sqrt(a);
+            if(n * n == a){
+                return true;
+            }
+            else return false;
+        }
+
+        function check(){
+            let n = document.getElementById("number").value;
+            if(checkSCP(n) && n != 0){
+                document.getElementById("result").innerHTML = "Là số chính phương";
+            }
+            else{
+                document.getElementById("result").innerHTML = "Không là số chính phương";
+            }
+        }
+
+    </script>
+</body>
+</html>

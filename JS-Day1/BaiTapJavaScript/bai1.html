@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="number">Nhập 1 số:</label>
+    <input type="text" id="number" name="number"/>
+    <input type="submit" onclick="checkInteger()"/>
+    <p id="result"></p>
+    <script>
+        
+        function checkInteger(){
+           let a = document.getElementById("number").value;
+           a = Number(a);
+           if(Number.isInteger(a)){
+                if(a > 0){
+                    document.getElementById("result").innerHTML = "Số nguyên dương";
+                }
+                else if(a < 0){
+                    document.getElementById("result").innerHTML = "Số nguyên âm";
+                }
+                else{
+                    document.getElementById("result").innerHTML = "Số nguyên";
+                }
+                
+           }
+           else{
+                document.getElementById("result").innerHTML = "Không là số nguyên";
+           }
+        }
+
+    </script>
+</body>
+</html>
