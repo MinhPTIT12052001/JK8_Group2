@@ -1,0 +1,7 @@
+1) Các kiểu dữ liệu nguyên thủy (7 kiểu): number, string, null, boolean, undefind, symbol, BigInt
+2) Xem kiểu của 1 biến: dùng toán tử typeof
+3) var: dùng khai báo biến toàn cục
+   let: chỉ có tác dụng trong khối lệnh
+4) const: dùng khai báo hằng
+5) object: kiểu tham chiếu
+6) number: kiểu tham trị
