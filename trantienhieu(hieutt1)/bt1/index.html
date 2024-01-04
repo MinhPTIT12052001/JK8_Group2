@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+
+<!-- form ho ten -->
+<form id="form-info">
+  <label for="hoten">Ho ten:</label><br>
+  <input type="text" id="hoten" name="hoten"><br>
+  <label for="dotuoi">Do tuoi:</label><br>
+  <input type="number" id="dotuoi" name="dotuoi"><br>
+  <label for="sodienthoai">So dien thoai:</label><br>
+  <input type="text" id="sodienthoai" name="sodienthoai"><br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<hr/>
+
+<!-- form chieu dai chieu rong -->
+<form id="rectangular-box-form">
+    <label for="length">Chiều dài:</label>
+    <input type="number" id="length" name="length"><br>
+  
+    <label for="width">Chiều rộng:</label>
+    <input type="number" id="width" name="width"><br>
+  
+    <label for="height">Chiều cao:</label>
+    <input type="number" id="height" name="height"><br>
+  
+    <br>
+    <input type="submit" value="Tính diện tích toàn phần">
+  </form>
+
+
+</body>
+
+<script>
+    let showinfoForm = document.getElementById("form-info");
+
+
+    //test bien tham chieu
+    let o1 = {name: "Hieu"}
+    let o2 = o1;
+    o2.name = "Toan";
+
+    console.log(o1);
+
+
+
+    showinfoForm.addEventListener("submit" ,e => {
+        e.preventDefault();
+
+        let hoTenValue = document.getElementById("hoten").value;
+        let tuoiValue = document.getElementById("dotuoi").value;
+        let soDienThoaiValue = document.getElementById("sodienthoai").value;
+
+
+        console.log("Họ tên:", hoTenValue);
+        console.log("Tuổi:", tuoiValue);
+        console.log("Số điện thoại:", soDienThoaiValue);
+
+    });
+
+
+    let rectangularBoxForm = document.getElementById("rectangular-box-form");
+
+    rectangularBoxForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Lấy giá trị chiều dài, chiều rộng và chiều cao từ người dùng
+        let length = parseFloat(document.getElementById("length").value);
+        let width = parseFloat(document.getElementById("width").value);
+        let height = parseFloat(document.getElementById("height").value);
+
+        // Tính diện tích toàn phần (6 mặt) của hình hộp chữ nhật
+        let surfaceArea = 2 * (length * width + length * height + width * height);
+
+        // In kết quả ra console
+         console.log("Diện tích toàn phần của hình hộp chữ nhật là:", surfaceArea);
+    });
+
+</script>
+
+</html>
