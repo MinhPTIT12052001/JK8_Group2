@@ -7,4 +7,4 @@ function calculateSum(numbers: number[]): number {
   }
   const numbers = [1, 2, 3, 4, 5];
 const sum = calculateSum(numbers);
-console.log(sum); // Kết quả: 15
+console.log(sum); 
