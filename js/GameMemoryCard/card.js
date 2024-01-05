@@ -17,7 +17,9 @@ let cardsList = [
 ];
 const rows = 5;
 const columns = 6;
-
+let turn = 0;
+let score = 0;
+let totalSuccess = 0;
 let carSelected1;
 let cardSelected2;
 let totalCards;
@@ -93,7 +95,73 @@ function update() {
   if (carSelected1.src != cardSelected2.src) {
     carSelected1.src = "./img/Aht.jpg";
     cardSelected2.src = "./img/Aht.jpg";
+    turn++;
+    document.getElementById("turn").innerText = turn;
+  } else if (carSelected1.src === cardSelected2.src) {
+    totalSuccess++;
+    if (totalSuccess === 15) {
+      score = calculateScore(turn);
+      displayModal(score);
+    }
   }
   carSelected1 = null;
   cardSelected2 = null;
 }
+
+function displayModal(score) {
+  // Lấy đối tượng modal
+  var myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
+
+  // Hiển thị modal
+  myModal.show();
+
+  // Cập nhật nội dung modal
+  document.getElementById("modalBody").innerText = "Điểm của bạn là: " + score;
+}
+function calculateScore(a) {
+  if (a < 10) {
+    return 10;
+  } else if (a < 12) {
+    return 9;
+  } else if (a < 14) {
+    return 8;
+  } else if (a < 16) {
+    return 7;
+  } else if (a < 18) {
+    return 6;
+  } else if (a < 20) {
+    return 5;
+  } else if (a < 22) {
+    return 4;
+  } else if (a < 24) {
+    return 3;
+  } else if (a < 30) {
+    return 2;
+  } else {
+    return 1;
+  }
+}
+
+// function restartGame() {
+//   // Đặt lại các biến và mảng để bắt đầu trò chơi mới
+//   turn = 0;
+//   score = 0;
+//   totalSuccess = 0;
+//   carSelected1 = null;
+//   cardSelected2 = null;
+//   main = [];
+
+//   // Xóa các thẻ hiện tại trong #main
+//   document.getElementById("main").innerHTML = "";
+
+//   // Tạo lại và bắt đầu trò chơi mới
+//   shuffleCards();
+//   startGame();
+
+//   // Ẩn modal
+//   var myModal = new bootstrap.Modal(
+//     document.getElementById("exampleModal"),
+//     {}
+//   );
+//   myModal.hide();
+// }
