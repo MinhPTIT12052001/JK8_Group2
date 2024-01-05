@@ -77,4 +77,3 @@ let check = find_square_number(n);
 if( check == 1 ) console.log(n + " là số chính phương");
 else console.log(n + " không phải là số chính phương");
 
-// Bài 6: 
