@@ -1,0 +1,48 @@
+<html>
+
+<body>
+    <form id="formnhaptiendien">
+        <label for="sodientieuthu">Nhap so dien tieu thu</label>
+        <input type="number" id="sodientieuthu" name="sodientieuthu"/> <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+    <h1 class="hienthisotien"></h1>
+</body>
+
+<script>
+   
+    const hienthisotien = document.querySelector(".hienthisotien");
+
+    const formnhaptiendienSubmit = document.getElementById("formnhaptiendien");
+
+    formnhaptiendienSubmit.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let sodientieuthu = (Number)(document.getElementById("sodientieuthu").value);
+
+        hienthisotien.innerHTML = tinhtiendientheogiabacthang(sodientieuthu);
+    });
+
+    const tinhtiendientheogiabacthang = (sodientt) => {
+        console.log(sodientt);
+        let tongtien = 0;
+        if (sodientt > 0 && sodientt <= 50) {
+            tongtien = sodientt * 1.806;
+        } else if (sodientt > 50 && sodientt <= 100) {
+            tongtien = sodientt * 1.866;
+        } else if (sodientt > 100 && sodientt <= 200) {
+            tongtien = sodientt * 2.167;
+        } else if (sodientt > 201 && sodientt <= 300) {
+            tongtien = sodientt * 2.729;
+        } else if (sodientt > 301 && sodientt <= 400) {
+            tongtien = sodientt * 3.05;
+        } else if (sodientt > 400) {
+            tongtien = sodientt * 3.151;
+        }else{
+            return "gia tri ko xac dinh";
+        }
+        return tongtien*0.1;
+    };
+</script>
+</html>
