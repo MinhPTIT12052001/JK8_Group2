@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Nhập số điện tiêu thụ: </label>
+    <input type="text" id="power"/>
+    <input type="submit" onclick="calculate()"/>
+    <p>Số tiền phải trả: <span id="result"></span></p>
+    <script>
+        function calculate(){
+            let n = document.getElementById("power").value;
+            n = Number(n);
+            let bill;
+            if(n <= 50){
+                bill = n * 1806;
+            }
+            else if(n <= 100){
+                bill = 50 * 1806 + (n - 50) * 1866;
+            }
+            else if(n <= 200){
+                bill = 50 * 1806 + 50 * 1866 + (n - 100) * 2167;
+            }
+            else if(n <= 300){
+                bill = 50 * 1806 + 50 * 1866 + 100 * 2167 + (n - 200) * 2729;
+            }
+            else if(n <= 400){
+                bill = 50 * 1806 + 50 * 1866 + 100 * 2167 + 100 * 2729 + (n - 300) * 3050;
+            }else{
+                bill = 50 * 1806 + 50 * 1866 + 100 * 2167 + 100 * 2729 + 100 * 3050 + (n - 400) * 3151;
+            }
+            bill += bill * 10 / 100;
+            document.getElementById("result").innerHTML = bill;
+        }
+    </script>
+</body>
+</html>

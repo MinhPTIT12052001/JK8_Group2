@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .error{
+        color: red;
+    }
+</style>
+<body>
+    <form action="">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" id="name"/>
+                <span class="error" id="name-error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>
+                <input type="text" id="email"/>
+                <span class="error" id="email-error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Website:</td>
+            <td>
+                <input type="text" id="website"/>
+                <span class="error" id="website-error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Message:</td>
+            <td>
+                <textarea rows="4" cols="15" id="message"></textarea>
+                <span class="error" id="message-error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value="Submit"/>
+            </td>
+        </tr>
+    </table>
+    </form>
+    <script>
+        function isUrlValid(string){
+            try{
+                new URL(string);
+                return true;
+            }
+            catch(error){
+                return false;
+            }
+        }
+
+        var form = document.querySelector('form');
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+            let name = document.getElementById("name").value;
+            let message = document.getElementById("message").value;
+            let email = document.getElementById("email").value;
+            let website = document.getElementById("website").value;
+            if(name == ""){
+                document.getElementById("name-error").innerHTML = "This field is required";
+            }
+            if(message == ""){
+                document.getElementById("message-error").innerHTML = "This field is required";
+            }
+            var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/;
+            if(!emailRegex.test(email)){
+                document.getElementById("email-error").innerHTML = "A valid email address is required";
+            }
+            
+            if(!isUrlValid(website)){
+                document.getElementById("website-error").innerHTML = "A valid url is required";
+            }
+        })
+    </script>
+</body>
+</html>
