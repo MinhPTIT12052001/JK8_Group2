@@ -2,7 +2,7 @@ const gridContainer = document.querySelector(".grid-container");
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
-let score = 1;
+let score = 0;
 let isOverGame = false;
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
