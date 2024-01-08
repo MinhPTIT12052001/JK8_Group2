@@ -1,0 +1,35 @@
+Bài tập buổi 1:
+Bài 1:
+Viết ctr cho phép nhập vào thông tin cá nhân bao gồm:
+Họ tên, tuổi, số điện thoại và sau đó in các thông tin này ra trên màn hình console
+Bài 2: viết chương trình cho phép nhập vào chiều cao chiều dài và chiều rộng của hình hộp chữ nhật, sau đó tính và in ra diện tích toàn phần (6 mặt) của hình hộp chữ nhật này.
+Bài 3: Trả lời câu hỏi
+– Có mấy kiểu nguyên thủy tất cả? Kể tên các kiểu nguyên thủy này.
+– Làm thế nào để xem được kiểu của một biến?
+– let với var khác nhau như thế nào?
+– khi nào thì dùng const?
+– kiểu object là kiểu tham chiếu hay tham trị?
+– number là kiểu tham chiếu hay tham trị?
+
+Bài làm.
+Bài 1:
+
+Bài 3:
+- Có tất cả 7 kiểu dữ liệu nguyên thuỷ:
+	+ Number
+	+ String
+	+ Boolean
+	+ null
+	+ undefined
+	+ Symbol
+	+ BigInt
+- Để xem kiểu dữ liệu của một biến dùng toán tử typeof.
+Ví dụ: let myVariable = "Hello"
+console.log(typeof myVariable);
+- let với var khác nhau:
+	+ let :phạm vi truy cập trong block(khối) mà nó được khai báo.
+	+ var :có phạm vi toàn cục hoặc phạm vi của hàm mà nó được khai báo.
+
+- Sử dụng const khi muốn khai báo một hằng số , một giá trị không thay đổi.
+- Kiểu object trong JavaScript là kiểu tham chiếu (reference type). Khi bạn gán một đối tượng cho một biến, biến đó sẽ trỏ đến vùng nhớ chứa đối tượng đó, không phải lưu trực tiếp giá trị của đối tượng.
+- Kiểu number trong JavaScript là kiểu tham trị (value type). Khi bạn gán một giá trị số cho một biến number, giá trị đó được lưu trực tiếp trong biến, không phải là tham chiếu đến vùng nhớ khác.

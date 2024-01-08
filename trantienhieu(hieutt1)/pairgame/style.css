@@ -1,0 +1,20 @@
+
+
+.cardItemCustom{
+    text-align: center;
+    cursor: pointer;
+    background-color: green;
+}
+
+.closeCard{
+    color: white;
+}
+
+.openCard{
+    color: black;
+}
+
+.done{
+    color: green;
+}
+

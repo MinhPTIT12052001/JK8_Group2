@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Biểu mẫu liên hệ</title>
+    <style>
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="/submit_form" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" >
+        <span class="error-message" id="name-error" style="display: none;">This field is required</span><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" >
+        <span class="error-message" id="email-error" style="display: none;">This field is required</span><br><br>
+        
+        <label for="website">Website:</label>
+        <input type="url" id="website" name="website" >
+        <span class="error-message" id="website-error" style="display: none;">This field is required</span><br><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" ></textarea>
+        <span class="error-message" id="message-error" style="display: none;">This field is required</span><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const websiteInput = document.getElementById('website');
+            const messageInput = document.getElementById('message');
+
+            if (!nameInput.value) {
+                document.getElementById('name-error').style.display = 'block';
+                event.preventDefault();
+            } else {
+                document.getElementById('name-error').style.display = 'none';
+            }
+
+            if (!emailInput.value) {
+                document.getElementById('email-error').style.display = 'block';
+                event.preventDefault();
+            } else {
+                document.getElementById('email-error').style.display = 'none';
+            }
+
+            if (!websiteInput.value) {
+                document.getElementById('website-error').style.display = 'block';
+                event.preventDefault();
+            } else {
+                document.getElementById('website-error').style.display = 'none';
+            }
+
+            if (!messageInput.value) {
+                document.getElementById('message-error').style.display = 'block';
+                event.preventDefault();
+            } else {
+                document.getElementById('message-error').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
