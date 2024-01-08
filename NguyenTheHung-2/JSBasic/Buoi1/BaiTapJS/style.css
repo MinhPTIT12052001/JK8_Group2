@@ -1,9 +1,0 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.input_info.error small {
-    color: #EE3B3B;
-    font-size: 12px;
-}
