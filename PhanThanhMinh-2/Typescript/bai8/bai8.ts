@@ -1,8 +1,8 @@
-import { factorial, isPrime } from "./utils";
+import { giaiThua, SoNguyenTo } from "./utils";
 
 const number = 5;
-const fact = factorial(number);
-console.log(`Factorial of ${number} is ${fact}`);
+const fact = giaiThua(number);
+console.log(`Giai thừa của ${number} là ${fact}`);
 
-const prime = isPrime(13);
-console.log(`Is 13 a prime number ${prime}`);
+const prime = SoNguyenTo(13);
+console.log(`kiểm tra 13 là số nguyên tố : ${prime}`);
