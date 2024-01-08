@@ -1,0 +1,17 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "Typescript exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "MinhPhan",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.6"
+  }
+}

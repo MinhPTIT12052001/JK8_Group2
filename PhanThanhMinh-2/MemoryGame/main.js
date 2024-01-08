@@ -3,13 +3,19 @@ let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
-
+let isOverGame = false;
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const closeModalBtn = document.querySelector(".btn-close");
 document.querySelector(".score").textContent = score;
+let totalCard;
+let countCards;
 
 fetch("./data/cards.json")
   .then((res) => res.json())
   .then((data) => {
     cards = [...data, ...data];
+    totalCard = countCards = cards.length;
     shuffleCards();
     generateCards();
   });
@@ -55,15 +61,22 @@ function flipCard() {
   }
 
   secondCard = this;
-  score++;
+  if (!checkMatch()) {
+    score++;
+  }
   document.querySelector(".score").textContent = score;
   lockBoard = true;
+  checkOverGame();
   checkForMatch();
 }
-function checkForMatch() {
-  let isMatch = firstCard.dataset.name === secondCard.dataset.name;
 
+function checkForMatch() {
+  let isMatch = checkMatch();
   isMatch ? disableCards() : unflipCards();
+}
+
+function checkMatch() {
+  return firstCard.dataset.name === secondCard.dataset.name;
 }
 
 function disableCards() {
@@ -81,8 +94,6 @@ function unflipCards() {
   }, 1000);
 }
 
-
-
 function resetBoard() {
   firstCard = null;
   secondCard = null;
@@ -94,8 +105,41 @@ function restart() {
   shuffleCards();
   score = 0;
   document.querySelector(".score").textContent = score;
+  isOverGame = false;
+  countCards = totalCard;
   gridContainer.innerHTML = "";
   generateCards();
 }
 
+function checkOverGame() {
+  if (checkMatch()) {
+    countCards -= 2;
+  }
+  
+  if (countCards === 0) {
+    isOverGame = true;
+    if (isOverGame) {
+      getTotalScore();
+      setTimeout(() => {
+        openModal();
+      }, 1000);
+    }
+  }
+}
 
+function openModal() {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+}
+
+closeModalBtn.addEventListener("click", closeModal);
+
+function closeModal() {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+  restart();
+}
+
+function getTotalScore() {
+  document.querySelector(".total-score").textContent = score;
+}
