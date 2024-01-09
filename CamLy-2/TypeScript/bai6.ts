@@ -1,4 +1,4 @@
-class Person{
+class Person1{
     name: string;
     age: number;
     email: string;
@@ -18,5 +18,5 @@ function logInfor(){
     }
 }
 
-let ps1 = new Person("abc", 21, "hgg");
+let ps1 = new Person1("abc", 21, "hgg");
 ps1.getInfor2();
