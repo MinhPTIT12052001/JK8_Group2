@@ -4,7 +4,8 @@
   "description": "Typescript exercises",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "dev": "nodemon main.js"
   },
   "keywords": [
     "typescript"
@@ -12,6 +13,7 @@
   "author": "MinhPhan",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.10.6"
+    "@types/node": "^20.10.6",
+    "json-server": "^1.0.0-alpha.14"
   }
 }

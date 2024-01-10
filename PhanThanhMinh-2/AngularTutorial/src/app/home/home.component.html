@@ -1,9 +1,0 @@
-<h2>Tên mình là {{name}}</h2>
-
-<div>
-    <input type="text" [(ngModel)]="age">
-    <h2>Tuổi của mình là {{age}}</h2>
-    <div *ngIf="age < 30, then tre, else gia"></div>
-    <ng-template #tre><h2>Bạn ít hơn 30 tuổi</h2></ng-template>
-    <ng-template #gia><h2>Bạn nhiều hơn 30 tuổi</h2></ng-template>
-</div>
