@@ -1,12 +1,12 @@
-export function factorial(n: number): number {
+export function giaiThua(n: number): number {
     if (n === 0 || n === 1) {
       return 1;
     } else {
-      return n * factorial(n - 1);
+      return n * giaiThua(n - 1);
     }
   }
   
-  export function isPrime(n: number): boolean {
+  export function SoNguyenTo(n: number): boolean {
     if (n <= 1) {
       return false;
     }
