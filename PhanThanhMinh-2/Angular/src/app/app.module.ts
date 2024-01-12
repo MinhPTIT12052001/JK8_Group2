@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import {AuthService} from "./services/auth.service";
 import {FormsModule} from "@angular/forms";
 import { MyNavComponent } from './my-nav/my-nav.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'src/material.module';
 
 
 @NgModule({
@@ -24,7 +26,10 @@ import { MyNavComponent } from './my-nav/my-nav.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
