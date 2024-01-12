@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import {AuthService} from "./services/auth.service";
 import {FormsModule} from "@angular/forms";
+import { MyNavComponent } from './my-nav/my-nav.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import {FormsModule} from "@angular/forms";
     HomeComponent,
     AdminComponent,
     LoginComponent,
+    MyNavComponent,
   ],
   imports: [
     BrowserModule,

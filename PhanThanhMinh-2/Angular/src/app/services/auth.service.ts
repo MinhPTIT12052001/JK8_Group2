@@ -1,27 +1,31 @@
 import { Injectable } from '@angular/core';
+import {Router} from "@angular/router";
+import {BehaviorSubject, Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  private loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
+    false
+  )
 
-  constructor() { }
+  constructor(private route: Router, private http: HttpClient) { }
 
-  login(username: string, password: string): string{
-    const users = require('http://localhost:3000/users');
+  public logout(): void {
+    this.loggedIn.next(false)
+    this.route.navigate(['']);
+  }
+  // public login(): void {
+  //   this.loggedIn.next(true)
+  //   this.route.navigate(['/home'])
+  // }
 
-    const user = users.find((user: any) => user.username === username);
-
-    if (user){
-      if (user.password === password){
-        return user.role;
-      }
-      else {
-        return 'invalid password';
-      }
-    }
-    else {
-      return 'user not found'
-    }
+  public isLoggedIn(): Observable<boolean>{
+    return this.loggedIn.asObservable();
+  }
+  public getUser(): Observable<any>{
+    return this.http.get<any>('http://localhost:3000/users')
   }
 }

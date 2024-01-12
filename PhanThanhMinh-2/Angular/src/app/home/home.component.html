@@ -1,28 +1,9 @@
-<!--<h2>Danh sách sản phẩm</h2>-->
-<!--<ul>-->
-<!--  <li *ngFor="let product of products">-->
-<!--    {{ product.name }} - {{ product.price}}-->
-<!--  </li>-->
-<!--</ul>-->
 <div class="container">
-  <header>
-    <h1>Welcome to Home Page</h1>
-  </header>
-  <main>
-    <section>
-      <h2>About Us</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sit amet urna ac sapien tristique congue.</p>
-    </section>
-    <section>
-      <h2>Latest News</h2>
-      <ul>
-        <li>News 1</li>
-        <li>News 2</li>
-        <li>News 3</li>
-      </ul>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 My Website. All rights reserved.</p>
-  </footer>
+  <h2>Danh sách sản phẩm</h2>
+  <ul class="product-list">
+    <li *ngFor="let product of products" class="product-item">
+      <span class="product-name">{{ product.name }}</span>
+      <span class="product-price">{{ product.price }}</span>
+    </li>
+  </ul>
 </div>
