@@ -1,0 +1,53 @@
+{
+    "books": [
+      {
+        "id": 1,
+        "img":"abc",
+        "name": "Cơ sở dữ liệu",
+        "author":"Nguyễn Lan",
+        "price": "100000",
+        "quantity":20,
+        "description":"Sách tham khảo",
+        "type": "Giáo dục",
+        "year":2000,
+        "rating": 3.5
+      },
+      {
+        "id": 2,
+        "img":"abc",
+        "name": "Cơ sở dữ liệu",
+        "author":"Nguyễn Lan",
+        "price": "100000",
+        "quantity":20,
+        "description":"Sách tham khảo",
+        "type": "Giáo dục",
+        "year":2000,
+        "rating": 3.5
+      },
+      {
+        "id": 3,
+        "img":"abc",
+        "name": "Cơ sở dữ liệu",
+        "author":"Nguyễn Lan",
+        "price": "100000",
+        "quantity":20,
+        "description":"Sách tham khảo",
+        "type": "Giáo dục",
+        "year":2000,
+        "rating": 3.5
+      }
+      , {
+        "id": 4,
+        "img":"abc",
+        "name": "Cơ sở dữ liệu",
+        "author":"Nguyễn Lan",
+        "price": "100000",
+        "quantity":20,
+        "description":"Sách tham khảo",
+        "type": "Giáo dục",
+        "year":2000,
+        "rating": 3.5
+      }
+    
+    ]
+  }
