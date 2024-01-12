@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Danh sách sản phẩm</h2>
+  <ul class="product-list">
+    <li *ngFor="let product of products" class="product-item">
+      <span class="product-name">{{ product.name }}</span>
+      <span class="product-price">{{ product.price }}</span>
+    </li>
+  </ul>
+</div>
