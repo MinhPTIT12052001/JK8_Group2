@@ -29,7 +29,7 @@ import { MaterialModule } from 'src/material.module';
     FormsModule,
     BrowserAnimationsModule,
     MaterialModule,
-    
+
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
