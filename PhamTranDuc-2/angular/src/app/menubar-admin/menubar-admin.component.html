@@ -1,0 +1,180 @@
+<aside id="sidebar" class="sidebar" th:fragment="sidebar">
+  <ul class="sidebar-nav" id="sidebar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="authen.html">
+        <i class="bi bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <!-- End Dashboard Nav -->
+
+    <li class="nav-item">
+      <a
+        class="nav-link collapsed"
+        data-bs-target="#components-nav"
+        data-bs-toggle="collapse"
+        href="#"
+      >
+        <i class="bi bi-menu-button-wide"></i><span>Quản lý tài khoản</span
+        ><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul
+        id="components-nav"
+        class="nav-content collapse"
+        data-bs-parent="#sidebar-nav"
+      >
+        <li>
+          <a th:href="@{/users}">
+            <i class="bi bi-circle"></i><span>Tài khoản thành viên:</span>
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/customer}">
+            <i class="bi bi-circle"></i><span>Tài khoản khách hàng:</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <!-- End Components Nav -->
+
+    <li class="nav-item">
+      <a
+        class="nav-link collapsed"
+        data-bs-target="#location-nav"
+        data-bs-toggle="collapse"
+        href="#"
+      >
+        <i class="bi bi-journal-text"></i><span>Location</span
+        ><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul
+        id="location-nav"
+        class="nav-content collapse"
+        data-bs-parent="#sidebar-nav"
+      >
+        <li>
+          <a href="forms-elements.html">
+            <i class="bi bi-circle"></i><span>Quốc gia</span>
+          </a>
+        </li>
+        <li>
+          <a href="forms-elements.html">
+            <i class="bi bi-circle"></i><span>Tỉnh thành</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <!-- End Forms Nav -->
+    <li class="nav-item">
+      <a
+        class="nav-link collapsed"
+        data-bs-target="#product-nav"
+        data-bs-toggle="collapse"
+        href="#"
+      >
+        <i class="bi bi-journal-text"></i><span>Quản lý sản phẩm</span
+        ><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul
+        id="product-nav"
+        class="nav-content collapse"
+        data-bs-parent="#sidebar-nav"
+      >
+        <li>
+          <a th:href="@{/brands}">
+            <i class="bi bi-circle"></i><span>Thương hiệu</span>
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/categories}">
+            <i class="bi bi-circle"></i><span>Danh mục</span>
+          </a>
+        </li>
+        <li>
+          <a th:href="@{/products}">
+            <i class="bi bi-circle"></i><span>Sản phẩm</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link collapsed"
+        data-bs-target="#analyst-nav"
+        data-bs-toggle="collapse"
+        href="#"
+      >
+        <i class="bi bi-journal-text"></i><span>Analytics and Reporting</span
+        ><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul
+        id="analyst-nav"
+        class="nav-content collapse"
+        data-bs-parent="#sidebar-nav"
+      >
+        <li>
+          <a href="forms-elements.html">
+            <i class="bi bi-circle"></i><span>Analytics</span>
+          </a>
+        </li>
+        <li>
+          <a href="forms-elements.html">
+            <i class="bi bi-circle"></i><span>Reporting</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a
+        class="nav-link collapsed"
+        data-bs-target="#setting-nav"
+        data-bs-toggle="collapse"
+        href="#"
+      >
+        <i class="bi bi-journal-text"></i><span>Cài đặt</span
+        ><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul
+        id="setting-nav"
+        class="nav-content collapse"
+        data-bs-parent="#sidebar-nav"
+      >
+        <li>
+          <a th:href="@{/settings}">
+            <i class="bi bi-circle"></i><span>Cài đặt chung</span>
+          </a>
+        </li>
+        <li>
+          <a href="forms-elements.html">
+            <i class="bi bi-circle"></i><span>Currency Setting</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <!-- End Tables Nav -->
+    <li class="nav-item">
+      <a
+        class="nav-link collapsed"
+        data-bs-target="#HR-nav"
+        data-bs-toggle="collapse"
+        href="#"
+      >
+        <i class="bi bi-journal-text"></i><span>Order Tracking</span
+        ><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul
+        id="HR-nav"
+        class="nav-content collapse"
+        data-bs-parent="#sidebar-nav"
+      >
+        <li>
+          <a href="forms-elements.html">
+            <i class="bi bi-circle"></i><span>Order Tracking</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</aside>
