@@ -1,0 +1,20 @@
+.nav-bar{
+    list-style-type: none;
+    background-color: antiquewhite;
+}
+
+.nav-bar .nav-bar-item{
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-bar .nav-bar-item a{
+    display: block;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.nav-bar .nav-bar-item a:hover{
+    text-decoration: none;
+}
+

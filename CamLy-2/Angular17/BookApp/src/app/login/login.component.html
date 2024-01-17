@@ -1,0 +1,34 @@
+
+<div class="main-content">
+
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <p-card header="Login" [style]="{width: '360px'}">
+        <div class="field">
+            <label for="username">Username</label>
+            <!-- <input [(ngModel)]="user.username" type="text" class="w-full" name="username" placeholder="Username"/> -->
+            <input type="text" class="w-full" name="username" formControlName="username" placeholder="Username"/>
+
+            <small *ngIf="username.invalid && (username.dirty || username.touched)" class="block p-error">
+                <div *ngIf="username.errors?.['required']">Username is required</div>
+            </small>
+        </div>
+        <div class="field">
+            <label for="password">Password</label>
+            <!-- <input [(ngModel)]="user.password" type="password" class="w-full" name="password" placeholder="Password"/> -->
+            <input  type="password" class="w-full" name="password" formControlName="password" placeholder="Password"/>
+
+            <small *ngIf="password.invalid && (password.dirty || password.touched)" class="block p-error">
+                <div *ngIf="password.errors?.['required']">Password is required</div>
+                <div *ngIf="password.errors?.['pattern']">Password is invalid</div>
+            </small>
+        </div>
+        <p-button label="Login" styleClass="w-full"
+            [disabled]="loginForm.invalid"
+         type="submit"
+        
+         ></p-button>
+         
+    </p-card>
+</form>
+</div>

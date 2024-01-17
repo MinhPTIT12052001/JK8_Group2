@@ -1,21 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Product } from '../interfaces/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpServerServiceService {
-  private REST_API_SERVER = 'http://localhost:3000';
-  private httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
-    })
-  }
+  private baseUrl = 'http://localhost:3000';
+
   constructor(private httpClient: HttpClient) { }
-  public getComments(): Observable<any>{
-    const url = `${this.REST_API_SERVER}/employees`;
-    
-    return this.httpClient.get<any>(url, this.httpOptions);
+
+  getBookList(): Observable<any>{
+    return this.httpClient.get<Product[]>(`${this.baseUrl}/books`);
   }
 }

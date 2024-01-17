@@ -3,8 +3,8 @@
       {
         "id": 1,
         "img":"abc",
-        "name": "Cơ sở dữ liệu",
-        "author":"Nguyễn Lan",
+        "name": "Nhà giả kim",
+        "author":"Paulo Coelho",
         "price": "100000",
         "quantity":20,
         "description":"Sách tham khảo",
@@ -16,7 +16,7 @@
         "id": 2,
         "img":"abc",
         "name": "Cơ sở dữ liệu",
-        "author":"Nguyễn Lan",
+        "author":"Paulo Coelho",
         "price": "100000",
         "quantity":20,
         "description":"Sách tham khảo",
@@ -28,7 +28,7 @@
         "id": 3,
         "img":"abc",
         "name": "Cơ sở dữ liệu",
-        "author":"Nguyễn Lan",
+        "author":"Paulo Coelho",
         "price": "100000",
         "quantity":20,
         "description":"Sách tham khảo",
@@ -40,7 +40,7 @@
         "id": 4,
         "img":"abc",
         "name": "Cơ sở dữ liệu",
-        "author":"Nguyễn Lan",
+        "author":"Paulo Coelho",
         "price": "100000",
         "quantity":20,
         "description":"Sách tham khảo",
@@ -49,10 +49,46 @@
         "rating": 3.5
       },
       {
-        "id": 4,
+        "id": 5,
         "img":"abc",
         "name": "Cơ sở dữ liệu",
-        "author":"Nguyễn Lan",
+        "author":"Paulo Coelho",
+        "price": "100000",
+        "quantity":20,
+        "description":"Sách tham khảo",
+        "type": "Giáo dục",
+        "year":2000,
+        "rating": 3.5
+      },
+      {
+        "id": 6,
+        "img":"abc",
+        "name": "Nhà giả kim",
+        "author":"Paulo Coelho",
+        "price": "100000",
+        "quantity":20,
+        "description":"Sách tham khảo",
+        "type": "Giáo dục",
+        "year":2000,
+        "rating": 3.5
+      },
+      {
+        "id": 7,
+        "img":"abc",
+        "name": "Nhà giả kim",
+        "author":"Paulo Coelho",
+        "price": "100000",
+        "quantity":20,
+        "description":"Sách tham khảo",
+        "type": "Giáo dục",
+        "year":2000,
+        "rating": 3.5
+      },
+      {
+        "id": 8,
+        "img":"abc",
+        "name": "Nhà giả kim",
+        "author":"Paulo Coelho",
         "price": "100000",
         "quantity":20,
         "description":"Sách tham khảo",
@@ -61,5 +97,21 @@
         "rating": 3.5
       }
     
+    ],
+
+    "users":[
+      {
+        "id": 1,
+        "username": "admin",
+        "password": "H1234567",
+        "role": "admin"
+      },
+      {
+        "id": 2,
+        "username": "user",
+        "password": "H1234567",
+        "role": "user"
+      }
+
     ]
   }

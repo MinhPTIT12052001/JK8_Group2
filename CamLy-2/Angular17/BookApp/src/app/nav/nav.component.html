@@ -1,0 +1,7 @@
+<ul class="nav-bar">
+    <li class="nav-bar-item"><a [routerLink]="['/home']" routerLinkActive="active">Home &nbsp;&nbsp;</a></li>
+    <li class="nav-bar-item"><a [routerLink]="['/about']" routerLinkActive="active">About &nbsp;&nbsp;</a></li>
+    <li *ngIf="isAdmin$ | async as isAdmin" class="nav-bar-item"><a [routerLink]="['/admin']" routerLinkActive="active">Dashboard Admin &nbsp;&nbsp;</a></li>
+    <li class="nav-bar-item"><a><button (click)="logout()">Logout</button> &nbsp;&nbsp;</a></li>
+    
+</ul>
