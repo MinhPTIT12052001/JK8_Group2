@@ -1,0 +1,39 @@
+<header id="header" class="car-header">
+    
+    <div class="car-header header-fixed">
+        <div class="row">
+            <div class="header-info">
+                <div class="logo">
+                    <i class='bx bxs-car' [routerLink]="['']"></i>
+                    <span [routerLink]="['']">FLASH AUTO</span>
+                </div>
+                <div class="megamainmenu">
+                    <ul class="megamainmenu listMenu">
+                        <li [routerLink]="['/admin']">Admin</li>
+                        <li [routerLink]="['']">Home</li>
+                        <li class="menu-car" [routerLink]="['/car']">Car</li>
+                        <li class="menu-chinhanh">
+                            <button mat-button [matMenuTriggerFor]="menu" class="branches">Chi nhánh</button>
+                            <mat-menu #menu="matMenu">
+                            <button mat-menu-item [routerLink]="['/car']" value="1">Chi nhánh 1</button>
+                            <button mat-menu-item [routerLink]="['/car']" value="2">Chi nhánh 2</button>
+                            <button mat-menu-item [routerLink]="['/car']" value="3">Chi nhánh 3</button>
+                            </mat-menu>
+                        </li>
+                        <li class="menu-cart" [routerLink]="['/cart']">Giỏ hàng</li>
+                    </ul>
+                </div>
+                <div class="account">
+                    <span>
+                        <button mat-button [matMenuTriggerFor]="menu2" class="branches">Account</button>
+                            <mat-menu #menu2="matMenu">
+                            <button mat-menu-item [routerLink]="['/login']" value="4">Log out</button>
+                            <button mat-menu-item [routerLink]="['/login']" value="5">Sign Up</button>
+                            <button mat-menu-item [routerLink]="['/login']" value="6">Sign In</button>
+                            </mat-menu>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
