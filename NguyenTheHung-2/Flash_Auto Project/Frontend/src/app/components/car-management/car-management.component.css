@@ -1,0 +1,10 @@
+.nav-bar{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

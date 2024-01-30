@@ -1,0 +1,83 @@
+.car-footer .footer-col{
+    display: flex;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    z-index: 100;
+    position: relative;
+}
+
+.footer-col1{
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.footer-col2{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.logoname{
+    display: flex;
+}
+
+.logo .logoname span {
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    align-items: center;
+    width: 60%;
+}
+
+
+.logo .logoname i{
+    display: flex;
+    font-size: 60px;
+    height: 100%;
+    margin-left: 1rem;
+    margin-right: 20px;
+    width: 10%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.info p{
+    margin-top: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.info div{
+    width: 100%;
+}
+
+.cskh-title{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.hotline-phone{
+    display: flex;
+    margin-bottom: 15px
+}
+
+.hotline-phone i{
+    font-size: 30px;
+    margin-right: 10px;
+}
+.hotline-phone span{
+    /* display: flex; */
+    align-items: center;
+}
+
+.connect-me i{
+    font-size: 30px;
+    margin-right: 8px;
+}
