@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-menubar-admin',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './menubar-admin.component.html',
-  styleUrl: './menubar-admin.component.scss'
+  styleUrl: './menubar-admin.component.scss',
 })
-export class MenubarAdminComponent {
-
-}
+export class MenubarAdminComponent {}

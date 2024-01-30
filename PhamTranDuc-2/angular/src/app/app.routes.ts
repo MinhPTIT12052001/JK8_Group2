@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { AdminManagerComponent } from './admin-manager/admin-manager.component';
 import { AuthGuard } from './auth.guard';
 import { UserComponent } from './user/user.component';
+import { BookComponent } from './book/book.component';
 
 export const routes: Routes = [
   {
@@ -48,7 +49,18 @@ export const routes: Routes = [
     // ],
   },
   {
-    path: 'users',
+    path: 'admin/users',
+    title: 'Admin - Users',
+    component: UserComponent,
+  },
+  {
+    path: 'admin/list-book',
+    title: 'Admin - Books',
+    component: BookComponent,
+  },
+  {
+    path: 'admin/list-user',
+    title: 'Admin - Users',
     component: UserComponent,
   },
   {

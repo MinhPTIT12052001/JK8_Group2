@@ -1,25 +1,38 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
+import { MenubarAdminComponent } from '../menubar-admin/menubar-admin.component';
 
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MenubarAdminComponent, HttpClientModule],
   templateUrl: './user.component.html',
   styleUrl: './user.component.scss',
 })
 export class UserComponent implements OnInit {
-  http = inject(HttpClient);
   users: any[] = [];
+  constructor(private _http: HttpClient) {}
+  fetchDataUserFromApi(): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this._http.get<any>('http://localhost:8080/ShopBookPTD/users').subscribe(
+        (res) => {
+          resolve(res);
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
 
   ngOnInit(): void {
-    this.fetchUsers();
-  }
-  // https://jsonplaceholder.typicode.com/users http://localhost:8080/ShopBookPTD/users
-  fetchUsers() {
-    this.http.get('http://localhost:3000/users').subscribe((users: any) => {
-      this.users = users;
-    });
+    this.fetchDataUserFromApi()
+      .then((data) => {
+        this.users = data;
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
   }
 }
