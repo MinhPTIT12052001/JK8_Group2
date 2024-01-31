@@ -79,22 +79,9 @@ export class ProductComponent implements OnInit {
 
   add() {
     this.ngxService.start();
-<<<<<<< HEAD
     
     const formData = this.builderFormAdddata();
-=======
-    // let formdata = this.productForm.value;
-
-    // let data = {
-    //   name : formdata.name,
-    //   categoryId: formdata.categoryId,
-    //   price: formdata.price,
-    //   description: formdata.description,
-    // }
     
-    const formData = this.builderFormdata();
->>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
-
       this.productService.add(formData).subscribe((response: any) => {
       this.dialogRef.close();
       this.ngxService.stop();
@@ -115,20 +102,10 @@ export class ProductComponent implements OnInit {
 
   edit() {
     this.ngxService.start()
-<<<<<<< HEAD
     
     const data = this.builderFormEditData();
-=======
-    var formData = this.productForm.value;
-    var data = {
-      id: this.dialogData.data.id,
-      name: formData.name,
-      categoryId: formData.categoryId,
-      price: formData.price,
-      description: formData.description,
-    }
 
->>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
+
     this.productService.update(data).subscribe((response: any) => {
       this.ngxService.stop();
       this.dialogRef.close();
@@ -147,11 +124,7 @@ export class ProductComponent implements OnInit {
     });
   }
 
-<<<<<<< HEAD
   private builderFormAdddata(): FormData {
-=======
-  private builderFormdata(): FormData {
->>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
     const formData = new FormData();
     
     formData.append('name',this.productForm.get('name').value);
@@ -164,7 +137,8 @@ export class ProductComponent implements OnInit {
     }
     return formData;
     }
-<<<<<<< HEAD
+
+
     private builderFormEditData(): FormData {
       const formData = new FormData();
       formData.append('id', this.dialogData.data.id);
@@ -179,6 +153,4 @@ export class ProductComponent implements OnInit {
       return formData;
     }
   }
-=======
-}
->>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
+

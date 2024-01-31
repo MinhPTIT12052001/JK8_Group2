@@ -15,17 +15,11 @@ export class ProductService {
     return this.http.post(this.url + '/product/add', data)
   }
 
-<<<<<<< HEAD
+
   update(data: any): Observable<any>{
     return this.http.post(this.url + '/product/update', data, 
     // { headers: new HttpHeaders().set('Content-Type', 'application/json'),}
     );
-=======
-  update(data: any) {
-    return this.http.post(this.url + '/product/update', data, {
-      headers: new HttpHeaders().set('Content-Type', 'application/json'),
-    });
->>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
   }
   getProducts() {
     return this.http.get(this.url + '/product/get');
