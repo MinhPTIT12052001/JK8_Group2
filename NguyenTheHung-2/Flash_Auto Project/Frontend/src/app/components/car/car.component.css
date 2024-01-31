@@ -1,0 +1,17 @@
+main{
+    margin-top: 80px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.navbar input{
+    margin-left: 45px;
+    margin-right: 10px;
+    width: 25%;
+    height: 37px;
+    border-radius: 5px;
+}

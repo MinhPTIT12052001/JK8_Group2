@@ -63,8 +63,18 @@ export const MaterialRoutes: Routes = [
         },
         children: [
             {
+<<<<<<< HEAD
                 path: 'details/:id',
                 component: ProductDetailsComponent,
+=======
+                path: '',
+                component: ViewHomeComponent,
+            },
+            {
+                path: 'details/:id',
+                component: ProductDetailsComponent,
+                canActivate: [RouteGuardService],
+>>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
                 data: {
                     expectedRole: ['admin','user']
                 },

@@ -20,7 +20,10 @@ import { ManageUserComponent } from './manage-user/manage-user.component';
 import { ViewBillComponent } from './view-bill/view-bill.component';
 import { ViewHomeComponent } from './view-home/view-home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+<<<<<<< HEAD
 import { ModifyTextPipe } from './pipes/modify-text.pipe';
+=======
+>>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
 
 @NgModule({
   imports: [
@@ -40,14 +43,22 @@ import { ModifyTextPipe } from './pipes/modify-text.pipe';
     ConfirmationComponent,
     ManageCategoryComponent,
     CategoryComponent,
+<<<<<<< HEAD
+=======
+    ManageProductComponent,
+>>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
     ProductComponent,
     ManageOrderComponent,
     ManageUserComponent,
     ViewBillComponent,
     ViewHomeComponent,
+<<<<<<< HEAD
     ProductDetailsComponent,
     ManageProductComponent,
     ModifyTextPipe
+=======
+    ProductDetailsComponent
+>>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
   ]
 })
 export class MaterialComponentsModule {}

@@ -83,12 +83,21 @@ export class ManageProductComponent implements OnInit {
 
   handleEditAction(values: any) {
     console.log(values);
+<<<<<<< HEAD
     const dialogConfig = new MatDialogConfig();
     dialogConfig.data = {
       action: 'Edit',
       data: values,
     };
     const dialogRef = this.dialog.open(ProductComponent, dialogConfig);
+=======
+    const dialogConfog = new MatDialogConfig();
+    dialogConfog.data = {
+      action: 'Edit',
+      data: values,
+    };
+    const dialogRef = this.dialog.open(ProductComponent, dialogConfog);
+>>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
     this.router.events.subscribe(() => {
       dialogRef.close();
     });
@@ -164,7 +173,11 @@ export class ManageProductComponent implements OnInit {
   getImageUrl(element: any): string {
     try {
       if (element.imageName && element.imageType && element.imageBytes) {
+<<<<<<< HEAD
         const uint8Array = new Uint8Array(atob(element.imageBytes).split('').map(char => char.charCodeAt(0)));
+=======
+        let uint8Array = new Uint8Array(atob(element.imageBytes).split('').map(char => char.charCodeAt(0)));
+>>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
         const base64Image = btoa(String.fromCharCode(...uint8Array));
         return `data:${element.imageType};base64,${base64Image}`;
       } 

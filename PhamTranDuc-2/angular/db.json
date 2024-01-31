@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "TranDinhQue",
+      "password": "Phamtranduc",
+      "role": "USER"
+    },
+    {
+      "id": 2,
+      "username": "PhamTranDuc",
+      "password": "Phamtranduc",
+      "role": "ADMIN"
+    },
+    {
+      "id": 3,
+      "username": "DangVuThu",
+      "password": "Phamtranduc",
+      "role": "USER"
+    },
+    {
+      "id": 4,
+      "username": "NguyenManhSon",
+      "password": "Phamtranduc",
+      "role": "USER"
+    },
+    {
+      "id": 5,
+      "username": "NguyenManhHung",
+      "password": "Phamtranduc",
+      "role": "USER"
+    }
+  ]
+}
