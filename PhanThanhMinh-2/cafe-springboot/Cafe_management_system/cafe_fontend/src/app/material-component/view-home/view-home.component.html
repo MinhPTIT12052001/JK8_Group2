@@ -24,9 +24,9 @@
                                                 </ul>
                                         </div>
                                         <div class="part-2">
-                                                <h2>{{ product.name }}</h2>
-                                                <h3 class="product-title">{{ product.description }}</h3>
-                                                <h4>{{ product.price }}</h4>
+                                                <h2>{{product.name | modifyText : 'pizza' : '-discount(50%)'| modifyText : 'spagetty' : '(new product)' }}</h2>
+                                                <h3 class="product-title">{{product.description | modifyText : 'pizza' : '-discount(50%)'| modifyText : 'spagetty' : '(new product)' }}</h3>
+                                                <h4>{{ product.price | currency: 'USD' : 'symbol':'1.0-0' }}</h4>
                                         </div>
                                 </div>
                         </div>

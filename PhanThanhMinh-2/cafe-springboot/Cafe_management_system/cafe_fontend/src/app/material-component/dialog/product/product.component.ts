@@ -79,16 +79,8 @@ export class ProductComponent implements OnInit {
 
   add() {
     this.ngxService.start();
-    // let formdata = this.productForm.value;
-
-    // let data = {
-    //   name : formdata.name,
-    //   categoryId: formdata.categoryId,
-    //   price: formdata.price,
-    //   description: formdata.description,
-    // }
     
-    const formData = this.builderFormdata();
+    const formData = this.builderFormAdddata();
 
       this.productService.add(formData).subscribe((response: any) => {
       this.dialogRef.close();
@@ -110,15 +102,8 @@ export class ProductComponent implements OnInit {
 
   edit() {
     this.ngxService.start()
-    var formData = this.productForm.value;
-    var data = {
-      id: this.dialogData.data.id,
-      name: formData.name,
-      categoryId: formData.categoryId,
-      price: formData.price,
-      description: formData.description,
-    }
-
+    
+    const data = this.builderFormEditData();
     this.productService.update(data).subscribe((response: any) => {
       this.ngxService.stop();
       this.dialogRef.close();
@@ -137,7 +122,7 @@ export class ProductComponent implements OnInit {
     });
   }
 
-  private builderFormdata(): FormData {
+  private builderFormAdddata(): FormData {
     const formData = new FormData();
     
     formData.append('name',this.productForm.get('name').value);
@@ -150,4 +135,17 @@ export class ProductComponent implements OnInit {
     }
     return formData;
     }
-}
+    private builderFormEditData(): FormData {
+      const formData = new FormData();
+      formData.append('id', this.dialogData.data.id);
+      formData.append('name', this.productForm.get('name').value);
+      formData.append('categoryId', this.productForm.get('categoryId').value);
+      formData.append('price', this.productForm.get('price').value);
+      formData.append('description', this.productForm.get('description').value);
+  
+      if (this.selectedFile) {
+        formData.append('imageFile', this.selectedFile, this.selectedFile.name);
+      }
+      return formData;
+    }
+  }

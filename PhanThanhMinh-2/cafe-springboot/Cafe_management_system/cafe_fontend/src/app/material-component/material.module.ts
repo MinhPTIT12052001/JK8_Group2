@@ -20,6 +20,7 @@ import { ManageUserComponent } from './manage-user/manage-user.component';
 import { ViewBillComponent } from './view-bill/view-bill.component';
 import { ViewHomeComponent } from './view-home/view-home.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ModifyTextPipe } from './pipes/modify-text.pipe';
 
 @NgModule({
   imports: [
@@ -39,13 +40,14 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ConfirmationComponent,
     ManageCategoryComponent,
     CategoryComponent,
-    ManageProductComponent,
     ProductComponent,
     ManageOrderComponent,
     ManageUserComponent,
     ViewBillComponent,
     ViewHomeComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ManageProductComponent,
+    ModifyTextPipe
   ]
 })
 export class MaterialComponentsModule {}
