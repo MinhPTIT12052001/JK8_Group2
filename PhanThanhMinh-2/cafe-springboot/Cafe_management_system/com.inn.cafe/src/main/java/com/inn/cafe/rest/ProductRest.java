@@ -17,9 +17,11 @@ public interface ProductRest {
                                                 @RequestParam("imageFile") MultipartFile[] files);
     @GetMapping(path = "/get")
     public ResponseEntity<List<ProductWrapper>> getAllProduct();
-    @PostMapping(path = "/update")
-    public ResponseEntity<String> updateProduct(@RequestBody(required = true) Map<String,String> requestMap,
-                                                @RequestPart("files") MultipartFile[] files);
+
+    @PostMapping(path = "/update", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    public ResponseEntity<String> updateProduct(@RequestParam Map<String,String> requestMap,
+                                                @RequestParam("imageFile") MultipartFile[] files);
+
     @PostMapping(path = "/delete/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable Integer id);
     @PostMapping(path = "/updateStatus")

@@ -63,10 +63,6 @@ export const MaterialRoutes: Routes = [
         },
         children: [
             {
-                path: '',
-                component: ViewHomeComponent,
-            },
-            {
                 path: 'details/:id',
                 component: ProductDetailsComponent,
                 canActivate: [RouteGuardService],
