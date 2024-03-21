@@ -15,6 +15,7 @@ export class ViewHomeComponent implements OnInit {
     this.productService.getProducts().subscribe(
       (data: any) => {
         this.products = data;
+        console.log(this.products)
       },
       (error) => {
         console.error(error);

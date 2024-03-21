@@ -13,7 +13,7 @@
                         <div *ngFor="let product of products" class="col-md-6 col-lg-4 col-xl-3">
                                 <div id="product-{{product.id}}" class="single-product">
                                         <div class="part-1">
-                                                <a [routerLink]="['/cafe/view/details', product.id]">
+                                                <a routerLink="/cafe/details/{{product.id}}">
                                                         <img [src]="getImageUrl(product)" alt="{{ product.name }}"
                                                                 class="product-image">
                                                 </a>
@@ -24,15 +24,10 @@
                                                 </ul>
                                         </div>
                                         <div class="part-2">
-<<<<<<< HEAD
                                                 <h2>{{product.name | modifyText : 'pizza' : '-discount(50%)'| modifyText : 'spagetty' : '(new product)' }}</h2>
                                                 <h3 class="product-title">{{product.description | modifyText : 'pizza' : '-discount(50%)'| modifyText : 'spagetty' : '(new product)' }}</h3>
                                                 <h4>{{ product.price | currency: 'USD' : 'symbol':'1.0-0' }}</h4>
-=======
-                                                <h2>{{ product.name }}</h2>
-                                                <h3 class="product-title">{{ product.description }}</h3>
-                                                <h4>{{ product.price }}</h4>
->>>>>>> 711f66f92ea7358148a8fc62c2dcb16dc60b2e5d
+
                                         </div>
                                 </div>
                         </div>
